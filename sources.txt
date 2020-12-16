@@ -1,0 +1,22 @@
+For my Alpha I used the following assests from the Unity Asset store. Theses all fall under the MyAssestsFolder in my Assets Folder
+--------------------------------------------------------------------------
+1) For my Player I used the following robot asset: 
+	Robot Kyle
+	https://assetstore.unity.com/packages/3d/characters/robots/space-robot-kyle-4696
+	Asset remains unchanged from the source.
+
+2) For my Enemy I used the following robot asset: 
+	CyberSoldier	
+	https://assetstore.unity.com/packages/3d/characters/robots/cyber-soldier-52064
+	Asset remains unchanged from the source.
+
+
+3) Used the standard Assets (for Unity 2018.4): 
+	Standard Assets (for Unity 2018.4)
+	https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351
+	Deleted files that would not be used.
+
+4) For background buildings: 
+	russain_buildings
+	https://assetstore.unity.com/packages/3d/environments/urban/russian-buildings-lowpoly-pack-80518
+	Deleted buildings that would not be used.
