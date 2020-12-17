@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Concurrent;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 //Used to spawn the enemy at random with waves
 
@@ -11,8 +14,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject powerupPrefab;
     public int enemyCount;
     public int waveNumber = 1;
-
-
+    public TextMeshProUGUI scoreText;
+    public int score;
 
     //Max and Min range for ball to spawn on the X-axis
     private float spawnXRangeMin = 30.0f;
@@ -41,7 +44,8 @@ public class SpawnManager : MonoBehaviour
         {
             waveNumber++;
             spawnEnemyWave(waveNumber);
-            Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
+            scoreText.text = "Score: "+ waveNumber.ToString();
+            //Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
         }
     }
 
@@ -60,6 +64,8 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < enemiesToSpawn; i++)
         {
+            score++;
+
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
     }

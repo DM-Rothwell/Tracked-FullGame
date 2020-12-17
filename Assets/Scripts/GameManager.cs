@@ -3,73 +3,77 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //Declare private variables
-    private int score;  //int to keep score
-    public TextMeshProUGUI scoreText;   //textmesh to display the score to the user
-    
-    //Decalre public variables
-    public bool gameActive;    //boolean to make the game active = true, or inactive = false
+    public Button restartButton;
+    private float spawnRate = 1.0f;
+    public List<GameObject> targets;
+    private int score;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI gameOverText;
+    public bool isGameActive = false;
+    public GameObject TitleScreen;
 
     // Start is called before the first frame update
-    /*void Start()
+    void Start()
     {
-        UpdateScore(0);
 
-        IEnumerator SpawnManager()
-        {
-            while (true)
-            {
-                UpdateScore(1);
-            }//End of while
-        }//end of IEnumerator
-    }*/
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    IEnumerator SpawnTarget()
+    {
+        while (isGameActive)
+        {
+            yield return new WaitForSeconds(spawnRate);
+            int index = Random.Range(0, targets.Count);
+            Instantiate(targets[index]);
+        }
+    }
+
+    public void UpdateScore(int scoreToAdd)
+    {
+
+        score += scoreToAdd;
+        scoreText.text = "Score: " + score;
+    }
+
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+        isGameActive = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        UpdateScore();
+        Destroy(gameObject);
     }
 
-    void UpdateScore()
-    {
-        score++;
-        scoreText.text = "Score: " + score;
-    }
-
-
-    /*public void UpdateScore(int scoreAdd)
-    {
-        score += scoreAdd;
-        scoreText.text = "Score: " + score;
-        
-    }*/
-
-    //Used to start game when "Play Game" is clicked
-    public object StartGame()
-    {
-        //"Turn on" the game so it is playable
-        gameActive = true;
-        score = 0;
-
-        //StartCoroutine(SpawnManager());
-        //UpdateScore(0);
-
-        return StartGame();
-    }
-
-    //Method to restart the game when it is over
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //SceneManager.LoadScene("Menu");
+    }
+
+    public void StartGame(int difficulty)
+    {
+        isGameActive = true;
+        score = 0;
+        spawnRate /= difficulty;
+
+
+
+        StartCoroutine(SpawnTarget());
+        UpdateScore(0);
+
+        TitleScreen.gameObject.SetActive(false);
+
     }
 }
-
