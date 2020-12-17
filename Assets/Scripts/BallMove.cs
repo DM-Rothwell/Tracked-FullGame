@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 //Used for the projectile to move
 
 public class BallMove : MonoBehaviour
 {
     //Declare Variables
     public float speed = 35.0f; //Variable that controls the speed of the enemy ball
-
+    private float topBound = 75.0f;
+    public GameObject projectile;
+    public GameObject wall;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +24,6 @@ public class BallMove : MonoBehaviour
     }
 
     //If the ball goes past a range of 25 destroy it
-    public void destroyProjectile() { 
-    
-    }
+
+
 }

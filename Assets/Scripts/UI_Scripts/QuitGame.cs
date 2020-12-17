@@ -14,8 +14,4 @@ public class QuitGame : MonoBehaviour
         Debug.Log("Game Quit");
     }
 
-    public void buttonClick()
-    {
-        click.PlayOneShot(clickAudio);
-    }
 }
