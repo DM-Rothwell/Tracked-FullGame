@@ -297,7 +297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 115, y: 42}
+  m_AnchoredPosition: {x: 172, y: 52}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253291665
@@ -626,6 +626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8779868714915469612, guid: b4d01e53d92417e43bfd728abec9942e,
     type: 3}
+  hasPowerup: 0
 --- !u!1 &396828486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,7 +1217,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 7e-45, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 3.5138558e+13, y: 5.3397186e+20, z: 3.9443045e-31,
+    w: -1.941793e-32}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
