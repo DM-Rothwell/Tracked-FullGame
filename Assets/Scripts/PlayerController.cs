@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     //Public variables
     public GameObject projectilePrefab; //Decalre a GamObject for the projectile to be fired
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,4 +41,5 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }//End of if
     }
+
 }//End of class

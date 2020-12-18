@@ -11,7 +11,6 @@ public class BallMove : MonoBehaviour
     public float speed = 35.0f; //Variable that controls the speed of the enemy ball
     private float topBound = 150;
     public GameObject projectile;
-    public GameObject wall;
 
     // Update is called once per frame
     void Update()
@@ -22,14 +21,11 @@ public class BallMove : MonoBehaviour
         //Move ball
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
+        //Destroys the ball when it leaves the scene view
         if (transform.position.z > topBound)
         {
             Destroy(gameObject);
         }
     }
-
-    //If the ball goes past a range of 25 destroy it
-
-
 }    
 
