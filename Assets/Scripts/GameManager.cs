@@ -5,6 +5,11 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*GameManager to help with events such as
+    - Spawning enemies
+    - Counting score
+    - Restarting Game*/
+
 public class GameManager : MonoBehaviour
 {
     public Button restartButton;
@@ -15,18 +20,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public bool isGameActive = false;
     public GameObject TitleScreen;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public GameManager gameManager;
 
     IEnumerator SpawnTarget()
     {
@@ -40,7 +34,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(int scoreToAdd)
     {
-
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
     }
@@ -66,9 +59,6 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = true;
         score = 0;
-        spawnRate /= difficulty;
-
-
 
         StartCoroutine(SpawnTarget());
         UpdateScore(0);

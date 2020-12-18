@@ -438,6 +438,7 @@ MonoBehaviour:
   gameOverText: {fileID: 0}
   isGameActive: 0
   TitleScreen: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1001 &266092785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1215,7 +1216,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 5.84e-43, y: 2.3184012e+23, z: 5.84e-43, w: 1.285715e-39}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -6458,7 +6459,8 @@ MonoBehaviour:
   scoreText: {fileID: 253291665}
   gameOverText: {fileID: 2076350538}
   isGameActive: 0
-  TitleScreen: {fileID: 0}
+  TitleScreen: {fileID: 2076350536}
+  gameManager: {fileID: 0}
 --- !u!4 &1162588373
 Transform:
   m_ObjectHideFlags: 0
@@ -6659,7 +6661,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1425001897}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: restartTheGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1425001897
@@ -7512,7 +7525,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_firstOverflowCharacterIndex: 0
