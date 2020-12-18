@@ -11,10 +11,11 @@ public class PlayerController : MonoBehaviour
     private float turnSpeed = 100.0f;   //How fast the player turns
     private float horizontalInput;  //Control for AD or left and right arrow keys
     private float fowardInput;  //Control WS or up and down on the arrow keys
+    private float powerSpeed = 30.0f;
 
     //Public variables
     public GameObject projectilePrefab; //Decalre a GamObject for the projectile to be fired
-
+    public bool hasPowerup;
 
     // Start is called before the first frame update
     void Start()
@@ -41,5 +42,15 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }//End of if
     }
+
+    //On trigger to destroy powerup on collision
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Powerup"))
+        {
+            hasPowerup = true;
+            Destroy(other.gameObject);
+        }
+    }*/
 
 }//End of class

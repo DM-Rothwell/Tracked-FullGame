@@ -8,12 +8,6 @@ public class Mute : MonoBehaviour
     //Private variable
     private bool muted;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //muted = false;
-    }
-
     //When the toggle button is pressed turn of the music
     public void muteToggled()
     {
