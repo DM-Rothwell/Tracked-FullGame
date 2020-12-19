@@ -64,6 +64,5 @@ public class GameManager : MonoBehaviour
         UpdateScore(0);
 
         TitleScreen.gameObject.SetActive(false);
-
     }
 }

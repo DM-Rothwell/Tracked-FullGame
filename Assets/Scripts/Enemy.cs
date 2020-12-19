@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //Allows enemy to follow player
 public class Enemy : MonoBehaviour
@@ -11,6 +14,7 @@ public class Enemy : MonoBehaviour
 
     //Decalre public variables
     public float speed = 50.0f; //Enemy speed
+
 
     // Start is called before the first frame update
     void Start()

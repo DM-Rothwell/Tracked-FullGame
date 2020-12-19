@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //Used to have control over the players movement and to throw the ball when 'K' is pressed
 
@@ -17,11 +20,30 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab; //Decalre a GamObject for the projectile to be fired
     public bool hasPowerup;
 
-    // Start is called before the first frame update
-    void Start()
+    //RestartGame
+    public Button restartButton;
+    public TextMeshProUGUI gameOverText;
+    public bool isGameActive = true;
+    public GameObject enemy;
+
+    //Code for if statement             GameObject.FindGameObjectsWithTag("Enemy")
+
+    private void OnCollisionEnter(Collision collision)
     {
-       
+
     }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+            LayerMask enemy = LayerMask.GetMask("Enemy");
+       
+            gameOverText.gameObject.SetActive(true);
+            restartButton.gameObject.SetActive(true);
+            isGameActive = true;
+        
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -43,7 +65,7 @@ public class PlayerController : MonoBehaviour
         }//End of if
     }
 
-    //On trigger to destroy powerup on collision
+
     /*private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Powerup"))
