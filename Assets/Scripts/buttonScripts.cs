@@ -7,9 +7,9 @@ public class buttonScripts : MonoBehaviour
 {
 
     //Script used to be able to control what buttons do 
-    
-    //Private variable
-    private bool muted;
+
+    //Public variables
+    public bool muted;
 
     //When the toggle button is pressed turn of the music
     public void muteToggled()

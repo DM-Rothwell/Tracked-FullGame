@@ -6,18 +6,10 @@ using UnityEngine;
 public class DetctCollisions : MonoBehaviour
 {
 
+    //When the projectile hits the enemy destroy both
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
         Destroy(other.gameObject);
     }
-
-
-
-    public void OnCollisionEnter(Collision collision)
-    {
-
-    }
-
-
 }

@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour
     //Decalre public variables
     public float speed = 50.0f; //Enemy speed
 
-
     // Start is called before the first frame update
     void Start()
     {
