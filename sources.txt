@@ -1,4 +1,5 @@
-For my Alpha I used the following assests from the Unity Asset store. Theses all fall under the MyAssestsFolder in my Assets Folder
+For my Game I used the following assests from the Unity Asset store. 
+Theses all fall under the MyAssests folder in my Assets Folder
 --------------------------------------------------------------------------
 1) Used the standard Assets (for Unity 2018.4): 
 	Standard Assets (for Unity 2018.4)
@@ -6,21 +7,22 @@ For my Alpha I used the following assests from the Unity Asset store. Theses all
 	Deleted files that would not be used.
 
 2) For background buildings: 
-	russain_buildings
+	russain_buildings by MadMedicSoft
 	https://assetstore.unity.com/packages/3d/environments/urban/russian-buildings-lowpoly-pack-80518
 	Deleted buildings that would not be used.
 
 3) Background music: 
-	Take a Ride (Lounge Music)
+	Take a Ride (Lounge Music) by TFSUI
 	https://assetstore.unity.com/packages/audio/music/take-a-ride-lounge-music-77066
 	Asset remains unchanged from the source.
 
 4) Sound effects
-	Free Casual SoundFX Pack
+	Free Casual SoundFX Pack by Tim Beek
 	https://assetstore.unity.com/packages/audio/sound-fx/free-casual-soundfx-pack-164843
 	Deleted sound effects that would not be used.	
 
-5) Powerup Asset
-	Toon Crystals Pack
-	https://assetstore.unity.com/packages/3d/props/toon-crystals-pack-66182
-	Deleted crstals that would not be used
+5) Particle Effect
+	Particle Dissolve Shader Package by Moonflower Carnivore
+	https://assetstore.unity.com/packages/vfx/particles/fire-explosions/particle-dissolve-shader-package-33631
+	Deleted particles and their properties that will not be used
+	
