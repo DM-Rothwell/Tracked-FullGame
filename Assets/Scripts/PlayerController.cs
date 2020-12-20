@@ -17,7 +17,18 @@ public class PlayerController : MonoBehaviour
 
     //Public variables
     public GameObject projectilePrefab; //Decalre a GamObject for the projectile to be fired
+    private Rigidbody playerRb;
 
+    //Variables to end game
+    public Button restartButton;
+    public TextMeshProUGUI gameOverText;
+    public bool isgameActive = true;
+    public AudioSource end;
+
+    void Start()
+    {
+        end = GetComponent<AudioSource>();    
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,4 +49,18 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }//End of if
     }
+
+    //Private void to display gameover
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Game Over");
+            gameOverText.gameObject.SetActive(true);
+            restartButton.gameObject.SetActive(true);
+            isgameActive = false;
+            end.Play();
+        }
+    }
+
 }//End of class
